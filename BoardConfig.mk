@@ -21,15 +21,15 @@
 # definition file).
 #
 
--include device/motorola/msm8960-common/BoardConfigCommon.mk
+-include device/motorola/msm8960_jbbl-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/motorola/xt925/BoardConfigVendor.mk
+-include vendor/motorola/xt925_jbbl/BoardConfigVendor.mk
 
-LOCAL_PATH := device/motorola/xt925
+LOCAL_PATH := device/motorola/xt925_jbbl
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := xt925,vanquish_u
+TARGET_OTA_ASSERT_DEVICE := xt925,vanquish_u,xt925_jbbl,moto_msm8960_jbbl,moto_msm8960,xt926,vanquish,xt926_jbbl
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth

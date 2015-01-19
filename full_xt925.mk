@@ -26,11 +26,11 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from xt925 device
-$(call inherit-product, device/motorola/xt925/device.mk)
+$(call inherit-product, device/motorola/xt925_jbbl/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := xt925
-PRODUCT_NAME := full_xt925
+PRODUCT_DEVICE := xt925_jbbl
+PRODUCT_NAME := full_xt925_jbbl
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := RAZR HD
 PRODUCT_MANUFACTURER := motorola

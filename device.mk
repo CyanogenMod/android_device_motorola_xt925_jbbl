@@ -23,23 +23,20 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product, device/motorola/msm8960-common/msm8960.mk)
 
-LOCAL_PATH := device/motorola/xt925
+LOCAL_PATH := device/motorola/xt925_jbbl
+
+# Audio configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+
+$(call inherit-product, device/motorola/msm8960_jbbl-common/msm8960.mk)
 
 # xt925 specific overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Audio configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
-
-# Media config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,4 +52,4 @@ $(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
 $(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
 $(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
 $(call inherit-product, device/motorola/qcom-common/modules/nfc/nfc.mk)
-$(call inherit-product, vendor/motorola/xt925/xt925-vendor.mk)
+$(call inherit-product, vendor/motorola/xt925_jbbl/xt925_jbbl-vendor.mk)
