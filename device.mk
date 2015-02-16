@@ -38,6 +38,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Nfc
+PRODUCT_PACKAGES += \
+	nfc.msm8960
+
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
